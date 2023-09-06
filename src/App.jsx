@@ -21,7 +21,7 @@ function App() {
       </header>
       <div className="container">
         <div className="row my-3">
-          <div className="col-10 offset-1 bg-dark text-light p-3 rounded">
+          <div className="col-10 offset-1 p-3 rounded">
             <Outlet />
           </div>
         </div>
