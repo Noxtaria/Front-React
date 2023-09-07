@@ -15,11 +15,12 @@ const HomePage = () => {
 
   return (
     <div className="container">
-      <form className="form-inline d-flex">
-        <div className="form-group mb-2">
+      <h1 className="my-4">Réservez votre voyage</h1>
+      <form className="form">
+        <div className="form-group">
           <input
             type="text"
-            className="form-control form-control-lg"
+            className="form-control"
             id="depart"
             placeholder="Départ"
             value={depart}
@@ -27,10 +28,10 @@ const HomePage = () => {
           />
         </div>
   
-        <div className="form-group mb-2">
+        <div className="form-group">
           <input
             type="text"
-            className="form-control form-control-lg"
+            className="form-control"
             id="destination"
             placeholder="Destination"
             value={destination}
@@ -38,22 +39,22 @@ const HomePage = () => {
           />
         </div>
   
-        <div className="form-group mb-2">
+        <div className="form-group">
           <input
             type="date"
-            className="form-control form-control-lg"
+            className="form-control"
             id="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
           />
         </div>
   
-        <div className="form-group mb-2">
+        <div className="form-group">
           <input
             type="number"
-            className="form-control form-control-lg"
+            className="form-control"
             id="passager"
-            placeholder="Passager"
+            placeholder="Nombre de passagers"
             value={passager}
             onChange={(e) => setNombre(e.target.value)}
           />
@@ -61,15 +62,14 @@ const HomePage = () => {
   
         <button
           type="button"
-          className="btn btn-primary btn-lg ml-2"
+          className="btn btn-primary"
           onClick={handleRecherche}
         >
-          Recherche
+          Rechercher
         </button>
       </form>
     </div>
   );
-  
 }
 
 export default HomePage;
