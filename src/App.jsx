@@ -1,4 +1,4 @@
-import { Link, Outlet } from 'react-router-dom';
+import { Link, NavLink, Outlet } from 'react-router-dom';
 
 function App() {
   return (
@@ -6,10 +6,14 @@ function App() {
       <header>
         <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
           <div className="container-fluid">
-            <Link className="navbar-brand" to={`/`}><i className="bi bi-globe"></i> CoCoVoit</Link>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
+            <Link className="navbar-brand" to={`/`}>CoCoVoit</Link>
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <NavLink className="nav-link" to={`/createjourney`}>Créer ton trajet</NavLink>
+                </li>
+              </ul>
+            </div>
             <div className="ml-auto">
               <div className="btn-group">
                 <Link to="/login" className="btn btn-primary">Login</Link>

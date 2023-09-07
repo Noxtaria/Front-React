@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-const HomePage = () => {
+
+const CreateJourneyPage = () => {
   const [depart, setDepart] = useState('');
   const [destination, setDestination] = useState('');
   const [date, setDate] = useState('');
@@ -15,7 +16,7 @@ const HomePage = () => {
 
   return (
     <div className="container">
-      <form className="form-inline d-flex">
+      <form className="form-inline">
         <div className="form-group mb-2">
           <input
             type="text"
@@ -64,12 +65,11 @@ const HomePage = () => {
           className="btn btn-primary btn-lg ml-2"
           onClick={handleRecherche}
         >
-          Recherche
+          Créer
         </button>
       </form>
     </div>
   );
-  
 }
 
-export default HomePage;
+export default CreateJourneyPage
